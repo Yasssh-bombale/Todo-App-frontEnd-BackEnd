@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/home.css" />
+    <title><%= title%></title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="heading">
+          <h1>TODO App</h1>
+        </div>
+
+        <form action="" method="POST">
+          <div id="description">
+            <h2>DESCRIPTION</h2>
+            <input
+              type="text"
+              name="task"
+              placeholder="What do you need to do ?"
+              required
+            />
+          </div>
+          <div class="category-duedate-container">
+            <div class="category">
+              <h2>CATEGORY</h2>
+              <select name="category-types">
+                <option value="">Choose a category</option>
+                <option value="">Work</option>
+                <option value="">Personal</option>
+                <option value="">School</option>
+                <option value="">College</option>
+                <option value="">Other</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="/home.js"></script>
+  </body>
+</html>
