@@ -252,13 +252,7 @@
 .list-container li .work-btn {
   background: #9c00af;
   color: #fff;
-  height: 47px;
-  width: 111px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  margin-left: 17px;
+  padding: 10px 20px;
 }
 .list-container li .work-btn p {
   font-size: 16px;

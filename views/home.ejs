@@ -24,7 +24,7 @@
           <i class="fa-solid fa-list-check"></i>
         </div>
 
-        <form action="" method="POST">
+        <form action="/create-todo" method="POST">
           <div id="description">
             <h2>DESCRIPTION</h2>
             <input
@@ -44,7 +44,7 @@
               <h2>CATEGORY</h2>
               <div class="selector">
                 <div id="select-field">
-                  <p id="selectText">Choose a category</p>
+                  <p id="selectText" name="category">Choose a category</p>
                   <i id="drop-arrow" class="fa-solid fa-caret-down"></i>
                 </div>
                 <ul id="list" class="hidden">
@@ -74,7 +74,7 @@
 
             <div class="due-date">
               <h2>DUE DATE</h2>
-              <input type="date" />
+              <input name="date" type="date" />
             </div>
           </div>
 
@@ -88,22 +88,32 @@
             </button>
           </div>
 
+          <!-- modifying an code for ejs that i wrote mistakely -->
+
+          <!-- creating an tasklist container  -->
+
+          <!-- --------------------------------------------------------- -->
+
           <ul class="list-container">
+            <% for(let i of todo_list) {%>
             <li>
               <i class="fa-regular fa-circle"></i>
               <div class="task-content">
-                <h2>Why not add a Task ?</h2>
+                <h2><%= i.task%></h2>
                 <div class="date-in-list">
                   <i class="fa-solid fa-calendar-days"></i>
-                  <p>MAY 2,2019</p>
+                  <p><%=i.date%></p>
                 </div>
               </div>
 
               <div class="work-btn">
-                <p>WORK</p>
+                <p><%= i.category%></p>
               </div>
             </li>
+
+            <%} %>
           </ul>
+          <!-- ---------------------------------------------------------------- -->
         </form>
       </div>
     </div>
