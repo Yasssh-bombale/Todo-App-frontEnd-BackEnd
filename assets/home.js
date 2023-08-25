@@ -1,1 +1,18 @@
-console.log("hey script is fired successfully ! ");
+let selectField = document.getElementById("select-field");
+let selectText = document.getElementById("selectText");
+let options = document.getElementsByClassName("options");
+let list = document.getElementById("list");
+let arrow = document.getElementById("drop-arrow");
+
+selectField.addEventListener("click", () => {
+  list.classList.toggle("hidden");
+  arrow.classList.toggle("rotate");
+});
+
+for (option of options) {
+  option.onclick = function () {
+    selectText.innerHTML = this.textContent;
+    list.classList.toggle("hidden");
+    arrow.classList.toggle("rotate");
+  };
+}

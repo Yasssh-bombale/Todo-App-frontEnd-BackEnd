@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/4f027a41bf.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="/home.css" />
     <title><%= title%></title>
   </head>
@@ -17,6 +21,7 @@
       <div class="container">
         <div class="heading">
           <h1>TODO App</h1>
+          <i class="fa-solid fa-list-check"></i>
         </div>
 
         <form action="" method="POST">
@@ -29,17 +34,47 @@
               required
             />
           </div>
+
+          <!-- common container for category and due-date -->
+
           <div class="category-duedate-container">
+            <!-- 1) category container -->
+
             <div class="category">
               <h2>CATEGORY</h2>
-              <select name="category-types">
-                <option value="">Choose a category</option>
-                <option value="">Work</option>
-                <option value="">Personal</option>
-                <option value="">School</option>
-                <option value="">College</option>
-                <option value="">Other</option>
-              </select>
+              <div class="selector">
+                <div id="select-field">
+                  <p id="selectText">Choose a category</p>
+                  <i id="drop-arrow" class="fa-solid fa-caret-down"></i>
+                </div>
+                <ul id="list" class="hidden">
+                  <li class="options">
+                    <p>Personal</p>
+                  </li>
+                  <li class="options">
+                    <p>Work</p>
+                  </li>
+                  <li class="options">
+                    <p>College</p>
+                  </li>
+                  <li class="options">
+                    <p>School</p>
+                  </li>
+                  <li class="options">
+                    <p>Cleaning</p>
+                  </li>
+                  <li class="options">
+                    <p>Other</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 2) due-date container -->
+
+            <div class="due-date">
+              <h2>DUE DATE</h2>
+              <input type="date" />
             </div>
           </div>
         </form>
