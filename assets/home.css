@@ -158,3 +158,108 @@
   cursor: pointer;
   font-size: 16px;
 }
+
+/* Styling ADD TASK and DELETE TASK Button */
+
+.btn-container {
+  border-bottom: 1px solid #cfcfcf;
+  padding: 10px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-container #addTask-btn {
+  border: none;
+  outline: none;
+  padding: 11px 19px;
+  background: #444444;
+  color: #fff;
+  font-size: 19px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-container #addTask-btn i {
+  font-size: 21px;
+  margin-right: 4px;
+}
+
+/* styling DELETE TASK Button */
+
+.btn-container #deleteTask-btn {
+  border: none;
+  outline: none;
+  padding: 11px 19px;
+  background: #ee351e;
+  color: #fff;
+  font-size: 19px;
+  border-radius: 4px;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.btn-container #deleteTask-btn i {
+  font-size: 21px;
+  margin-right: 9px;
+}
+
+/* styling an TaskList container */
+
+.list-container {
+  border: 1px solid black;
+  padding: 10px;
+}
+.list-container li {
+  list-style: none;
+  border: 1px solid black;
+  padding: 10px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+.list-container li h2 {
+  font-weight: 600;
+  color: #3e3e3e;
+  font-size: 17px;
+  border: 1px solid black;
+  width: 473px;
+}
+.list-container li i {
+  margin-right: 10px;
+  font-size: 22px;
+}
+.list-container li .task-content {
+  border: 1px solid black;
+  padding: 10px;
+}
+.task-content .date-in-list p {
+  border: 1px solid black;
+  width: 99px;
+  /* padding: 10px; */
+}
+.date-in-list {
+  display: flex;
+  margin-top: 10px;
+  color: #898989;
+}
+.task-content .date-in-list i {
+  font-size: 22px;
+}
+
+/* various button designs for drop down options such as work school college and others */
+
+.list-container li .work-btn {
+  background: #9c00af;
+  color: #fff;
+  height: 47px;
+  width: 111px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-left: 17px;
+}
+.list-container li .work-btn p {
+  font-size: 16px;
+}
