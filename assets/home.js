@@ -3,6 +3,14 @@ let selectText = document.getElementById("selectText");
 let options = document.getElementsByClassName("options");
 let list = document.getElementById("list");
 let arrow = document.getElementById("drop-arrow");
+let listContainer = document.getElementById("ul");
+
+// let click = document.getElementById("checkUncheck");
+listContainer.addEventListener("click", (e) => {
+  if (e.target.tagName === "LI") {
+    e.target.classList.toggle("checked");
+  }
+});
 
 selectField.addEventListener("click", () => {
   list.classList.toggle("hidden");

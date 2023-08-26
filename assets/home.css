@@ -19,7 +19,7 @@
 
 .container {
   min-height: 582px;
-  width: 700px;
+  width: 720px;
   border: 1px solid #7d7d7d;
   margin: 50px auto 0px;
   /* padding: 10px; */
@@ -204,38 +204,133 @@
 }
 
 /* styling an TaskList container */
+.checkbox {
+  cursor: pointer;
+}
 
 .list-container {
-  border: 1px solid black;
+  border-top: 1px solid #9e9e9e;
   padding: 10px;
 }
 .list-container li {
   list-style: none;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border-bottom: 1px solid #9e9e9e;
   padding: 10px;
   height: 90px;
   display: flex;
   align-items: center;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
   /* justify-content: center; */
 }
 .list-container li h2 {
   font-weight: 600;
   color: #3e3e3e;
   font-size: 17px;
-  border: 1px solid black;
-  width: 473px;
+  /* border: 1px solid black; */
+  width: 450px;
 }
-.list-container li i {
+/* new check uncheck */
+
+/* 
+.todo-app ul li::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url(img/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 13px;
+  left: 11px;
+}
+.todo-app ul li.checked::before {
+  background-image: url(img/checked.png);
+}
+.todo-app ul li.checked {
+  text-decoration: line-through;
+  color: #d0d0d0;
+} 
+*/
+
+.list-container li::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url("./img/unchecked.png");
+  background-size: cover;
+  background-position: center;
+  top: 18px;
+  left: 5px;
+}
+
+.list-container li.checked::before {
+  background-image: url("./img/checked.png");
+}
+
+.list-container li.checked {
+  text-decoration: line-through;
+  color: #232121;
+}
+
+/* --------------------------- */
+
+/* --------------------------------------------- */
+
+/* check  */
+/* .list-container li .check {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
   margin-right: 10px;
-  font-size: 22px;
-}
-.list-container li .task-content {
-  border: 1px solid black;
+  margin-top: -25px;
+  cursor: pointer;
   padding: 10px;
 }
+.list-container li .check i {
+  visibility: hidden;
+} */
+
+/* .list-container li i {
+  margin-right: 10px;
+  font-size: 22px;
+} */
+
+/* unhceck */
+
+/* .uncheck {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: -25px;
+  cursor: pointer;
+  background: black;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.uncheck i {
+  font-size: 15px;
+  visibility: visible;
+} */
+
+/* ********************** */
+.list-container li .task-content {
+  /* border: 1px solid black; */
+  padding: 10px;
+  margin-left: 33px;
+}
 .task-content .date-in-list p {
-  border: 1px solid black;
-  width: 99px;
+  /* border: 1px solid black; */
+  width: 175px;
   /* padding: 10px; */
 }
 .date-in-list {
@@ -250,9 +345,16 @@
 /* various button designs for drop down options such as work school college and others */
 
 .list-container li .work-btn {
+  text-decoration: none;
   background: #9c00af;
   color: #fff;
-  padding: 10px 20px;
+  height: 47px;
+  width: 111px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-left: 52px;
 }
 .list-container li .work-btn p {
   font-size: 16px;

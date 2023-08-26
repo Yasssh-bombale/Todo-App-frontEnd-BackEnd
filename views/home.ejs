@@ -94,10 +94,15 @@
 
           <!-- --------------------------------------------------------- -->
 
-          <ul class="list-container">
+          <!-- <i class="fa-solid fa-circle-check"></i> -->
+
+          <ul id="ul" class="list-container">
             <% for(let i of todo_list) {%>
-            <li>
-              <i class="fa-regular fa-circle"></i>
+            <li id="list-tag">
+              <!-- <div id="checkUncheck" class="check demo">
+                <i class="fa-solid fa-check"></i>
+              </div> -->
+
               <div class="task-content">
                 <h2><%= i.task%></h2>
                 <div class="date-in-list">
@@ -105,7 +110,6 @@
                   <p><%=i.date%></p>
                 </div>
               </div>
-
               <div class="work-btn">
                 <p><%= i.category%></p>
               </div>
