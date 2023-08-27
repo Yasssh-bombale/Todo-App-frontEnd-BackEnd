@@ -13,15 +13,18 @@
   height: 100vh;
   width: 100%;
   padding: 10px;
+  background: linear-gradient(233deg, #380250, #915555);
 }
 
 /* setting an  container  */
 
 .container {
   min-height: 582px;
-  width: 720px;
+  width: 865px;
   border: 1px solid #7d7d7d;
   margin: 50px auto 0px;
+  background: #ececec;
+  border-radius: 6px;
   /* padding: 10px; */
 }
 
@@ -53,7 +56,7 @@
 }
 
 .container #description h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: #777777;
 }
@@ -88,9 +91,10 @@
   background: #f3f3f3;
 }
 .category-duedate-container .category h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: #777777;
+  margin-left: 2px;
 }
 .category .selector {
   /* padding: 10px; */
@@ -209,23 +213,6 @@
 
 /* styling DELETE TASK Button */
 
-.btn-container #deleteTask-btn {
-  border: none;
-  outline: none;
-  padding: 11px 19px;
-  background: #ee351e;
-  color: #fff;
-  font-size: 19px;
-  border-radius: 4px;
-  margin-left: 4px;
-  cursor: pointer;
-}
-
-.btn-container #deleteTask-btn i {
-  font-size: 21px;
-  margin-right: 9px;
-}
-
 /* styling an TaskList container */
 .checkbox {
   cursor: pointer;
@@ -233,7 +220,10 @@
 
 .list-container {
   border-top: 1px solid #9e9e9e;
-  padding: 10px;
+  /* padding: 10px; */
+}
+.list-container a {
+  color: transparent;
 }
 .list-container li {
   list-style: none;
@@ -367,6 +357,8 @@
   display: flex;
   margin-top: 10px;
   color: #898989;
+  /* border: 1px solid black; */
+  width: 157px;
 }
 .task-content .date-in-list i {
   font-size: 22px;
@@ -379,13 +371,14 @@
   text-decoration: none;
   background: #9c00af;
   color: #fff;
-  height: 47px;
-  width: 111px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  margin-left: 52px;
+  position: absolute;
+  right: 11px;
+  width: 128px;
 }
 .list-container li .work-btn p {
   font-size: 16px;
@@ -410,3 +403,57 @@
 }
 
 /* delete  */
+
+/* #a-tag {
+  padding: 5px;
+  margin-left: 63px;
+  border: 1px solid black;
+}
+
+.deleteTask-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  padding: 11px 15px;
+  background: #ee351e;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  /* position: absolute; */
+/* right: 136px; */
+/* }
+
+.deleteTask-btn i {
+  font-size: 21px;
+  margin-right: 9px;
+} */
+
+.deleteTask-btn {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  border-radius: 6px;
+  width: 177px;
+  padding: 10px;
+  margin-left: 18px;
+  background: #ee351e;
+}
+/* #a-tag {
+  border: 1px solid black;
+  padding: 10px;
+} */
+#a-tag {
+  display: flex;
+}
+#a-tag i {
+  font-size: 21px;
+  color: white;
+  margin-right: 12px;
+}
+#a-tag p {
+  font-size: 16px;
+  color: white;
+}

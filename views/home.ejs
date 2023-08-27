@@ -46,8 +46,9 @@
                 <option value="none">Choose a category</option>
                 <option value="Work">Work</option>
                 <option value="Personal">Personal</option>
-                <option value="School">School</option>
+                <option value="College">College</option>
                 <option value="Internship">Internship</option>
+                <option value="Coding Ninjas">Coding Ninjas</option>
                 <option value="Other">Other</option>
               </select>
             </div>
@@ -62,13 +63,13 @@
 
           <!-- now code for ADD TASK button and DELETE TASK button  -->
           <div class="btn-container">
-            <button onclick="addTask()" id="addTask-btn" type="submit">
+            <button id="addTask-btn" type="submit">
               <i class="fa-solid fa-plus"></i> ADD TASK
             </button>
 
-            <button id="deleteTask-btn">
+            <!-- <button id="deleteTask-btn" type="submit">
               <i class="fa-solid fa-trash-can"></i>DELETE TASK
-            </button>
+            </button> -->
           </div>
 
           <!-- modifying an code for ejs that i wrote mistakely -->
@@ -84,8 +85,8 @@
 
             <li id="list-tag">
               <!-- <div id="checkUncheck" class="check demo">
-                <i class="fa-solid fa-check"></i>
-              </div> -->
+                  <i class="fa-solid fa-check"></i>
+                </div> -->
 
               <div class="task-content">
                 <h2><%= i.task%></h2>
@@ -95,6 +96,19 @@
                 </div>
               </div>
 
+              <div class="deleteTask-btn">
+                <a id="a-tag" href="/delete-task/?id=<%=i.id%>">
+                  <i class="fa-solid fa-trash-can del-icon"></i>
+                  <p>Delete Task</p>
+                </a>
+              </div>
+
+              <!-- <a id="a-tag" href="/delete-task/?task=<%=i.task%>">
+                <button class="deleteTask-btn">
+                  <i class="fa-solid fa-trash-can"></i>Delete Task
+                </button>
+              </a> -->
+
               <div id="category-btns" class="work-btn">
                 <p id="p"><%= i.category%></p>
               </div>
@@ -102,6 +116,7 @@
 
             <%} %>
           </ul>
+
           <!-- ---------------------------------------------------------------- -->
         </form>
       </div>
