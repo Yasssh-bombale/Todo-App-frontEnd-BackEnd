@@ -42,47 +42,30 @@
 
             <div class="category">
               <h2>CATEGORY</h2>
-              <div class="selector">
-                <div id="select-field">
-                  <p id="selectText" name="category">Choose a category</p>
-                  <i id="drop-arrow" class="fa-solid fa-caret-down"></i>
-                </div>
-                <ul id="list" class="hidden">
-                  <li class="options">
-                    <p>Personal</p>
-                  </li>
-                  <li class="options">
-                    <p>Work</p>
-                  </li>
-                  <li class="options">
-                    <p>College</p>
-                  </li>
-                  <li class="options">
-                    <p>School</p>
-                  </li>
-                  <li class="options">
-                    <p>Cleaning</p>
-                  </li>
-                  <li class="options">
-                    <p>Other</p>
-                  </li>
-                </ul>
-              </div>
+              <select name="category" id="selectText">
+                <option value="none">Choose a category</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="School">School</option>
+                <option value="Internship">Internship</option>
+                <option value="Other">Other</option>
+              </select>
             </div>
 
             <!-- 2) due-date container -->
 
             <div class="due-date">
               <h2>DUE DATE</h2>
-              <input name="date" type="date" />
+              <input id="task-duedate" name="date" type="date" required />
             </div>
           </div>
 
           <!-- now code for ADD TASK button and DELETE TASK button  -->
           <div class="btn-container">
-            <button id="addTask-btn" type="submit">
+            <button onclick="addTask()" id="addTask-btn" type="submit">
               <i class="fa-solid fa-plus"></i> ADD TASK
             </button>
+
             <button id="deleteTask-btn">
               <i class="fa-solid fa-trash-can"></i>DELETE TASK
             </button>
@@ -98,6 +81,7 @@
 
           <ul id="ul" class="list-container">
             <% for(let i of todo_list) {%>
+
             <li id="list-tag">
               <!-- <div id="checkUncheck" class="check demo">
                 <i class="fa-solid fa-check"></i>
@@ -107,11 +91,12 @@
                 <h2><%= i.task%></h2>
                 <div class="date-in-list">
                   <i class="fa-solid fa-calendar-days"></i>
-                  <p><%=i.date%></p>
+                  <p id="deadline"><%=i.date%></p>
                 </div>
               </div>
-              <div class="work-btn">
-                <p><%= i.category%></p>
+
+              <div id="category-btns" class="work-btn">
+                <p id="p"><%= i.category%></p>
               </div>
             </li>
 

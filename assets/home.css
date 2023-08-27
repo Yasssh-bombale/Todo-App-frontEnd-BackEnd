@@ -112,6 +112,29 @@
   font-size: 18px;
   transition: transform 0.5s;
 }
+
+/*  code for category select tag */
+
+.category select {
+  margin-top: 8px;
+  color: #777777;
+  padding: 6px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 263px;
+  cursor: pointer;
+}
+/* styling options in select tag for tasks categories */
+
+.category select option {
+  padding: 10px;
+  color: black;
+}
+
+/* ----------------------------- */
 .category .selector #list {
   width: 100%;
   border: 0.4px solid rgb(152, 152, 152);
@@ -271,11 +294,18 @@
   background-image: url("./img/checked.png");
 }
 
-.list-container li.checked {
+/* .list-container li.checked {
   text-decoration: line-through;
   color: #232121;
-}
+} */
 
+.list-container li.checked .task-content {
+  text-decoration: line-through;
+  color: #676464;
+}
+.list-container li.checked .task-content h2 {
+  color: #676464;
+}
 /* --------------------------- */
 
 /* --------------------------------------------- */
@@ -340,6 +370,7 @@
 }
 .task-content .date-in-list i {
   font-size: 22px;
+  margin-right: 10px;
 }
 
 /* various button designs for drop down options such as work school college and others */
@@ -359,3 +390,23 @@
 .list-container li .work-btn p {
   font-size: 16px;
 }
+
+/* college button */
+
+.list-container li .college-btn {
+  text-decoration: none;
+  background: #f2a700;
+  color: #fff;
+  height: 47px;
+  width: 111px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-left: 52px;
+}
+.list-container li .college-btn p {
+  font-size: 16px;
+}
+
+/* delete  */

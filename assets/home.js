@@ -5,17 +5,16 @@ let list = document.getElementById("list");
 let arrow = document.getElementById("drop-arrow");
 let listContainer = document.getElementById("ul");
 
-// let click = document.getElementById("checkUncheck");
 listContainer.addEventListener("click", (e) => {
   if (e.target.tagName === "LI") {
     e.target.classList.toggle("checked");
   }
 });
 
-selectField.addEventListener("click", () => {
-  list.classList.toggle("hidden");
-  arrow.classList.toggle("rotate");
-});
+// selectField.addEventListener("click", () => {
+//   list.classList.toggle("hidden");
+//   arrow.classList.toggle("rotate");
+// });
 
 for (option of options) {
   option.onclick = function () {
